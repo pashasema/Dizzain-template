@@ -122,4 +122,4 @@ gulp.task('cssreplace', function() {
 	.pipe(gulp.dest('dist/dizzain-template'));
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['watch']);

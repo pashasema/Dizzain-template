@@ -7,9 +7,9 @@
 			</div><!-- .openform__imgwrap -->
 
 			<p class="all-titles openform__title">Request Beta Version</p>
-			<div class="openform-container__inner">
+			<div class="row">
 
-				<div class="openform__left-part">
+				<div class="col-6 col-sm-12">
 					<input type="text" class="form-group__field openform__field" name="name" placeholder="Full Name" required data-rule-required="true" data-rule-minlength="1" data-msg="Enter name" data-rule-checkMask="true">
 					<input type="email" class="form-group__field openform__field" name="email" placeholder="Email Address" required data-rule-required="true" data-rule-minlength="1" data-msg="Enter email" data-rule-checkMask="true">
 					<input type="tel" class="form-group__field openform__field" name="tel" placeholder="Phone Number" required data-rule-required="true" data-rule-minlength="1" data-msg="Enter email" data-rule-checkMask="true">
@@ -23,7 +23,7 @@
 					</div><!-- .openform__custom-select -->
 				</div><!-- .openform__left-part -->
 
-				<div class="openform__right-part">
+				<div class="col-6 col-sm-12">
 					<textarea class="form-group__textarea openform__textarea" name="comment" id="comment9" placeholder="Message(optional)"></textarea>
 				</div><!-- .openform__right-part -->
 
