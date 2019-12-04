@@ -72,6 +72,10 @@ label.input_errorcustom {
 	color: #000;
 	margin-bottom: 20px;
 	font-family: $title-font;
+	@media only screen and (max-width: 576px) {
+		font-size: 44px;
+		line-height: 50px;
+	}
 }
 
 //openform
@@ -83,11 +87,11 @@ label.input_errorcustom {
 	z-index: 100;
 	top: 0;
 	.mfp-close{
-		font-family: "FuturaPT-Light", sans-serif;
+		font-family: "FuturaPT-LightC", sans-serif;
 		color: #fff;
-		font-size: 80px;
+		font-size: 69px;
 		opacity: 1;
-		right: 17px;
+		right: 7px;
 	}
 }
 .openform-container__inner{
@@ -197,6 +201,10 @@ label.input_errorcustom {
 	margin-top: 30px;
 	position: relative;
 	border-radius: 4px;
+	min-height: 200px;
+	@media only screen and (max-width: 576px) {
+		min-height: auto;
+	}
 	&:before{
 		content: '';
 		width: 15px;
@@ -273,6 +281,7 @@ label.input_errorcustom {
 }
 .subscribe-block__form-title{
 	color: #fff;
+	text-align: center;
 }
 .subscribe-block__form-text{
 	color: #fff;
