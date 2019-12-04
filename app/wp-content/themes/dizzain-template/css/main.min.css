@@ -168,6 +168,9 @@ label.input_errorcustom {
   z-index: 100;
   top: 0; }
   .openform .mfp-close {
+    font-family: "FuturaPT-LightC", sans-serif;
+    color: #fff;
+    font-size: 69px;
     opacity: 1;
     right: 7px; }
 
