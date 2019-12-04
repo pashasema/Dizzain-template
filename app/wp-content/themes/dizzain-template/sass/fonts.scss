@@ -1,0 +1,13 @@
+@import "modules/mixins";
+
+//FuturaPT-Heavy
+@include font-face("FuturaPT-Heavy", "../fonts/Futura/FuturaPT/FuturaPT-Heavy");
+
+//FuturaPT-Light
+@include font-face("FuturaPT-Light", "../fonts/Futura/FuturaPT/FuturaPT-Light");
+
+//FuturaPT-Medium
+@include font-face("FuturaPT-Medium", "../fonts/Futura/FuturaPT/FuturaPT-Medium");
+
+//FuturaPT-LightC
+@include font-face("FuturaPT-LightC", "../fonts/Futura/Futura/FuturaLightC");

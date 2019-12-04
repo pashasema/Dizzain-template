@@ -1,0 +1,66 @@
+
+@import "../modules/vars";
+
+// Buttons
+//
+// Various button styles.
+//
+// Markup:
+// <a class="btn {{modifier_class}}" href="#">Button Element</a>
+// <button class="btn {{modifier_class}}">Button Element</button>
+// <input class="btn {{modifier_class}}" type="button" value="Input Button" />
+//
+// .btn--outline - Outlined button.
+// .btn--accent - Accent button color.
+// 
+// Styleguide Components.button
+.btn {
+	display: inline-block;
+  text-align: center;
+  font-family: $btn-font;
+  border-radius: 30px;
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 50px;
+  color: #2c40c8;
+  background: #fff;
+  border: none;
+  letter-spacing: 0;
+  font-weight: 600;
+  text-transform: initial;
+  text-decoration: none;
+  opacity: 1;
+  transition: .2s ease-out;
+  min-width: 166px;
+  cursor: pointer;
+  &:hover {
+  	text-decoration: none;
+    color: inherit;
+  }
+  &:active,
+  &:focus {
+  	text-decoration: none;
+  }
+}
+
+
+.btn--mobilemenu {
+  color: #fff;
+  font-size: 1em;
+  background-color: $blue;
+  line-height: 2.5em;
+  padding: 0 1em;
+  @include trans(all);
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $blue;
+    outline: 0;
+    color: #fff;
+  }
+}

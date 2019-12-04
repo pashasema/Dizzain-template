@@ -1,0 +1,123 @@
+@import "../modules/mixins";
+@import "../modules/vars";
+
+// Notifications
+//
+// Various notifications styles.
+//
+// Markup:
+//<div class="notification {{modifier_class}}">
+//  <div class="row">
+//    <div class="col-md-2">
+//      <div class="notification__icon">
+//        <i class="fa fa-check"></i>
+//      </div><!-- .notification__icon -->
+//    </div><!-- .col-md-3 -->
+//    <div class="col-md-10">
+//      <h3 class="notification__title">Выполнено успешно!</h3>
+//      <p class="notification__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, saepe?</p>
+//    </div><!-- .col-md-9 -->
+//  </div><!-- .row -->
+//</div><!-- .notification--success -->
+//
+// .notification--error - Error notification.
+// .notification--success - Success notification.
+// .notification--warning - Warning notification.
+// .notification--information - Info notification.
+//
+// Styleguide Components.notifications
+
+.notification {
+  position: absolute;
+  top: 2em;
+  z-index: 10;
+  right: 2em;
+  width: 20em;
+  color: #fff;
+  padding: 1em;
+  border-radius: $borderradius;
+  animation: shownotification .65s alternate;
+  // @include shadow;
+
+  @include bp-lg {
+    top: 1em;
+    right: 1em;
+  }
+
+  @include bp-sm {
+    top: 2em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@keyframes shownotification {
+    from {transform: translate(20em);}
+    to {transform: translate(0);}
+}
+
+.notification--error {
+  background-color: $lightred;
+  display: none;
+  @include trans(all);
+}
+
+.notification--success {
+  // top: 8em; //
+  background-color: $lightgreen;
+  display: none;
+}
+
+.notification--warning {
+  // top: 14em; //
+  background-color: $lightorange;
+  display: none;
+}
+
+.notification--information {
+  // top: 20em; //
+  background-color: $lightblue;
+  display: none;
+}
+
+.notification__icon {
+  text-align: right;
+  font-size: 1.5em;
+
+  @include bp-sm {
+    text-align: center;
+    margin-bottom: .4em;
+  }
+}
+
+.notification__icon--close {
+  cursor: pointer;
+}
+
+/*h3*/.notification__title {
+  margin-top: 0;
+  font-size: 1em;
+  margin-bottom: .3em;
+
+  @include bp-sm {
+    text-align: center;
+  }
+}
+
+/*p*/.notification__text {
+  font-size: .8em;
+  margin-bottom: 0;
+  line-height: 1.4em;
+
+  ul {
+    margin-left: 0;
+    padding-left: 1em;
+    margin-bottom: 0;
+  }
+
+  @include bp-sm {
+    text-align: center;
+  }
+}

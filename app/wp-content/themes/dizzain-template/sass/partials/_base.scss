@@ -1,0 +1,209 @@
+
+@import "../modules/vars";
+
+// Custom resets
+//
+// Custom reset is placed in base.scss file. It is defines default styles for placeholder, textarea and input.
+//
+// Styleguide Generic.customreset
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box; /* Нужно для мобильного WebKit */
+	-moz-box-sizing: border-box; /* Нужно для Firefox */
+	box-sizing: border-box;
+}
+
+*::-webkit-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+*:-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+*::-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #fff;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #fff;
+}
+
+.visuallyhidden {
+	display: none;
+}
+
+svg {
+	display: inline;
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+
+// Alignment and Text style
+//
+// Markup:
+// <span class="{{modifier_class}}" href="#">Text example</span>
+// <div class="{{modifier_class}}" href="#">Text example</div>
+//
+// .text-right - Set **text-align** property to **right**.
+// .text-left - Set **text-align** property to **left**.
+// .text-center - Set **text-align** property to **center**.
+// .text-block - Set **display** property to**block**.
+// .text-bold - Set **font-weight** property to **800**.
+// .text-underline - Set **border-bottom** property to **2px solid $accent**.
+// .text--highlighted - Set **color** property to **$accent**.
+// .text-highlightblue - Set **color** property to **$blue**.
+//
+// Styleguide Base.alignment
+.text-block {
+	display: block;
+
+	@include bp-md {
+		display: inline;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-bold {
+	font-weight: 800;
+}
+
+.text-underline {
+	border-bottom: 2px solid $accent;
+}
+
+.text--highlighted {
+	color: $accent;
+}
+
+.text-highlightblue {
+	color: $blue;
+}
+
+.table {
+	display: table;
+	width: 100%;
+}
+
+.table-cell {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.block {
+	display: block;
+
+	@include bp-md {
+		display: inline;
+	}
+}
+
+.section-padding {
+	padding: 5em 0;
+
+	@include bp-sm {
+		padding: 2.5em 0;
+	}
+}
+
+// Landing Page Heading
+//
+// Markup:
+// <h2 class="section-heading {{modifier_class}}">Text example</h2>
+//
+// .section-heading--thinwhite - Thin white heading on landing page.
+//
+// Styleguide Base.landingpageheading
+
+/*==========================
+	Heading in Sections
+	============================*/
+	.section-heading {
+		padding: 0 0 2em 0;
+		text-align: center;
+		margin: 0;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		@include bp-md {
+			padding-bottom: 1em;
+		}
+
+		@include bp-sm {
+			padding: 0 1em 1em;
+		}
+	}
+
+	.section-heading--thinwhite {
+		padding-bottom: 1em;
+		font-weight: 300;
+		color: #fff;
+	}
+
+/*==========================
+	Background color For Sections
+	============================*/
+	.section-white {
+		background-color: #fff;
+	}
+
+	.front-page {
+		.section-padding:nth-child(even) {
+			background-color: $gray;
+		}
+	}
+
+	.section-grey {
+		background-color: $gray;
+	}
+
+	.section-img {
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+
+/*==========================
+	Img Block in Sections
+	============================*/
+	.part-img {
+		text-align: center;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	iframe {
+		max-width: 100%;
+	}

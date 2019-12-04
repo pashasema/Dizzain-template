@@ -1,0 +1,12 @@
+//wp
+login: dizzain-admin
+password: VJwGF!WiMkC$c3K)zN
+
+//wp db
+name: dizzain-template
+login: root
+password: 
+
+//wp email
+email: dizzaintemplate@gmail.com
+password: rtb5n6b457m4563

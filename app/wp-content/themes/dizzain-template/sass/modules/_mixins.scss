@@ -1,0 +1,136 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$file-path}.eot');
+      src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
+    } @else {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+    }
+  }
+}
+
+// Tools
+//
+// Useful functions and mixins for fast work.
+// 
+// Styleguide Tools
+
+// Mixins
+//
+// Mixins for fast work.
+// 
+// Styleguide Tools.mixins
+
+// Other mixins
+//
+// Other mixins for fast work.
+// 
+// Styleguide Tools.mixins.other
+
+// Media Queries mixins
+//
+// Media queries mixins for fast work with adaptive.
+// 
+// Styleguide Tools.mixins.mediaqueries
+
+// @include trans($property);
+//
+// Creates a transition on property which was sended.
+//
+// Compatible in IE10+, Firefox 2+, Safari 3.2+, Chrome 1.0+, Opera 10.5+.
+//
+// $property - property that will be animated.
+//
+// Styleguide Tools.mixins.other.transition
+@mixin trans($property) {
+	transition: $property .35s ease;
+}
+
+// @include bp-mw1600 {}
+//
+// Creates the media queries for screens with width above 100em (1600px).
+//
+// Styleguide Tools.mixins.mediaqueries.bpmw1600
+
+//min-width 1600px
+@mixin bp-mw1600 {
+  @media only screen and (min-width: 100em) {
+    @content;
+  }
+}
+
+// @include bp-lg {}
+//
+// Creates the media queries for screens with width up to 75em (1200px).
+//
+// Styleguide Tools.mixins.mediaqueries.bplg
+
+//max-width 1200px
+@mixin bp-lg {
+  @media only screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+// @include bp-md {}
+//
+// Creates the media queries for screens with width up to 62em (992px).
+//
+// Styleguide Tools.mixins.mediaqueries.bpmd
+
+//max-width 992px
+@mixin bp-md {
+  @media only screen and (max-width: 62em) {
+    @content;
+  }
+}
+
+// @include bp-sm {}
+//
+// Creates the media queries for screens with width up to 48em (768px).
+//
+// Styleguide Tools.mixins.mediaqueries.bpsm
+
+//max-width 768px
+@mixin bp-sm {
+  @media only screen and (max-width: 48em) {
+    @content;
+  }
+}
+
+// @include bp-minheight { }
+//
+// Creates the media queries for screens with height up to 40em (678px).
+//
+// Styleguide Tools.mixins.mediaqueries.bpminheight
+
+//min-height 678px
+@mixin bp-minheight {
+  @media only screen and (min-height: 40em) {
+    @content;
+  }
+}
+
+// @include shadow();
+//
+// Creates a shadow in box elements.
+//
+// Styleguide Tools.mixins.other.shadow
+
+//Shadows
+// @mixin shadow {
+//   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+// }
+
+// @mixin shadow-capimg {
+//   box-shadow: 0px 12px 12px -8px rgba(0,0,0,0.1);
+// }
+
+// @mixin shadow-hover {
+//   box-shadow: 0px 14px 14px -14px rgba(0,0,0,0.8);
+// }

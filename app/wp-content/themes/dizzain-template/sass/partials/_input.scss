@@ -1,0 +1,141 @@
+
+@import "../modules/vars";
+
+/*==========================
+	Inputs
+============================*/
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #ccc;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: none;  
+}
+
+input:-webkit-autofill:focus {
+	border: 1px solid $main-color;
+}
+.form-group__textarea{
+	background: none;
+}
+.form__field {
+	width: 100%;
+	margin-bottom: .6em;
+	font-size: 1em;
+	line-height: 3; 
+	height: 3em;
+	padding: 0 1.5em;
+	display: inline-block;
+	border-radius: $borderradius;
+	border: 1px solid darken($gray, 5%);
+	color: darken($gray, 40%);
+	@include trans(all);
+
+	&:focus {
+		outline: none;
+		border: 1px solid $blue;
+	}
+}
+
+.form__field.error {
+	border-color: $lightred;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $lightred;
+	}
+}
+
+.form__field.success {
+	border-color: $lightgreen;
+}
+
+/*textarea*/.form__field--textarea {
+	resize: none;
+	height: 7em;
+}
+
+/*
+ * Switch
+ */
+
+/*label*/.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2.125em;
+  font-size: .9em;
+  margin: 0 .4em;
+}
+
+/*input*/.switch__checkbox {
+	display:none;
+}
+
+/*span*/.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background-color: $blue;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+	  position: absolute;
+	  content: "";
+	  height: 1.625em;
+	  width: 1.625em;
+	  left: .25em;
+	  bottom: .25em;
+	  // background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+}
+
+/*input*/.switch__checkbox:checked + .switch__slider {
+  background-color: $accent;
+}
+
+/*input*/.switch__checkbox:focus + .switch__slider {
+  box-shadow: 0 0 1px $accent;
+}
+
+/*input*/.switch__checkbox:checked + .switch__slider--price {
+	 background-color: $blue;
+ }
+
+/*input*/.switch__checkbox:focus + .switch__slider--price {
+	 box-shadow: 0 0 1px $blue;
+ }
+
+/*input*/.switch__checkbox:checked + .switch__slider:before {
+  -webkit-transform: translateX(1.625em);
+  -ms-transform: translateX(1.625em);
+  transform: translateX(1.625em);
+}
+
+/* Rounded sliders */
+
+/*span*/.switch__slider--round {
+  border-radius: 2.125em;
+
+  &:before {
+	  border-radius: 50%;
+	}
+}

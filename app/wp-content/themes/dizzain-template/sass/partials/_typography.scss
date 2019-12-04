@@ -1,0 +1,143 @@
+
+@import "../modules/vars";
+
+// Headings
+//
+// Markup:
+// <h1>Heading h1</h1>
+// <h2>Heading h2</h2>
+// <h3>Heading h3</h3>
+// <h4>Heading h4</h4>
+//
+// Styleguide Base.headings
+
+/*==========================
+  You can set typography here: https://www.gridlover.net/try
+  ============================*/
+
+  html, .root {
+    font-size: 16px;
+    line-height: 24px;
+
+    @include bp-sm {
+      font-size: 14px;
+    }
+  }
+
+  body {
+    color: $main-color;
+    font-weight: 300;
+    font-size: 1em;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.5em;
+    font-family: $default-font;
+    overflow-x: hidden;
+  }
+
+  button:active,button:focus{
+    outline: none;
+  }
+
+  a, a:hover, a:focus{
+    color: $main-color;
+    outline: none;
+
+  }
+  h1, .h1 {
+    font-size: 2.55em;
+    line-height: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include bp-sm {
+      font-size: 1.9em;
+    }
+  }
+  h2, .h2 {
+    font-size: 2.05555556em;
+    line-height: 1.45945946em;
+    margin-top: 0.72972973em;
+    margin-bottom: 0.72972973em;
+
+    @include bp-sm {
+      font-size: 1.5em;
+    }
+  }
+  h3, .h3 {
+    font-size: 1.44444444em;
+    line-height: 1.03846154em;
+    margin-top: 1.03846154em;
+    margin-bottom: 0em;
+  }
+  h4, .h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+  }
+  h5, .h5 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+    font-family: $title-font;
+    text-transform: initial;
+    color: #333;
+
+  }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 0em;
+    margin-bottom: 1.5em;
+  }
+  ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+
+  p {
+   font-size: 1.1em;
+ }
+
+ /* Let's make sure all's aligned */
+ hr, .hr {
+  border: 1px solid;
+  margin: -1px auto;
+}
+// a, b, i, strong, em, small, code {
+//   line-height: 0;
+// }
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+input{
+  font-family: $default-font;
+  font-weight: 300;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #efefef;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  min-width: 280px;
+  color: #ffffff;
+}
+::placeholder{
+  color: darken($gray,20%);
+}
+::selection{
+  color: #fff;
+  background-color: $main-color;
+}
