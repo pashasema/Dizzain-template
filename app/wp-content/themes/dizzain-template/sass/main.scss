@@ -339,6 +339,9 @@ label.input_errorcustom {
 .site-footer__info-wrap{
 	display: flex;
 	justify-content: space-between;
+	@media only screen and (max-width: 576px) {
+		flex-direction: column;
+	}
 }
 .site-footer__info-wrap{
 	color: #f4f5fa;

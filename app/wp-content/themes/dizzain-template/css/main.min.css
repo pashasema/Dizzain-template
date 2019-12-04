@@ -470,6 +470,13 @@ label.input_errorcustom {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media only screen and (max-width: 576px) {
+    .site-footer__info-wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .site-footer__info-wrap {
   color: #f4f5fa; }
